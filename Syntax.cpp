@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <cmath>
+#include <fstream>
 
 using namespace std;
 
@@ -234,7 +235,7 @@ string dayOfTheWeek (int dayNumber) {
 }
 
 //Do While loop
-    // the difference here is that the loop is cycled through first and then the condition is met.
+    // the difference here is that the loop is cycled through first and then the condition is met. Used for things like passwords.
     do {
     cout << index << endl;
     index++;
@@ -408,6 +409,25 @@ class Book {
             // can also add new objects here.
     };
 
+// Text files
+    // As opposed to getting information from a user we can get and send info to a seperate text file. This can be used when a lot of data is required.
+
+    string fileName;
+    cin >> fileName;
+
+    ofstream file (fileName()); // this sould prompt the user to enter the file name they want to open.
+
+    ofstream file; // file name
+    file.open("Hello.txt"); // opens file and will create a file called Hello of txt type.
+
+    file.close(); // how to close file.
+
+    file << "Hey"; // works like a cout that goes to the file. if using somthing like a vector just place in name of vector.
+
+
+
+
+//not done with the above one
 
     return 0;
 }
